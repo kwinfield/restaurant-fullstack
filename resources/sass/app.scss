@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
 @import "reset";
 @import "home";
+@import "pages/about";
 
 
 body {
@@ -33,5 +34,135 @@ table {
 
 body {
   font-family: 'Roboto', sans-serif;
+}
+
+#app-layout{
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  width: 100%;
+  height: 100vh;
+
+.side-menu{
+  background: white;
+  padding: 50px;
+  position: relative;
+  .logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    img{
+      max-width: 100px;
+    }
+  }
+  .menu{
+    margin-bottom: 50px;
+    .menu-title{
+      text-transform: uppercase;
+      color: #0971ce;
+      font-weight: 700;
+      font-size: 1.2rem;
+      border-bottom: 1px solid #e2eaef;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+    .links{
+      li{
+        a{
+          font-size: 1.1rem;
+          color: black;
+          font-weight: 700;
+          text-decoration: none;
+          margin-bottom: 1.4rem;
+          display: block;
+          transition: color .3s ease-in-out;
+          &:hover{
+            color: red;
+
+          }
+        }
+      }
+    }
+  }
+  .social-icons{
+    display: flex;
+    a{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #c2c8cc;
+      font-size: .9rem;
+      text-decoration: none;
+      color: white;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
+  .location{
+    align-self: center;
+    position: absolute;
+    bottom: 100px;
+    .address{
+      color: #7a8d99;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    .phone-number{
+      a{
+        color: #0971ce;
+        font-size: 2rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.welcome-jumbo{
+  max-width: calc(100vw - 350px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #ed4852; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover, #ed4852 0%, #9c1b24 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover, #ed4852 0%,#9c1b24 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, #ed4852 0%,#9c1b24 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  overflow: hidden;
+  padding: 100px;
+  .status{
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: .8rem;
+    font-weight: 700;
+    color: white;
+    background: black;
+    border-radius: 5px;
+    align-self: flex-start;
+    margin-bottom: 20px;
+  }
+  h1{
+    font-size: 4rem;
+    font-weight: 900;
+    align-self: flex-start;
+    color: white;
+    margin-bottom: 100px;
+  }
+  .burger-fries{
+    width: 100%;
+    // max-width: 1000px;
+    // animation: moveUpandDown 1s linear infinite;
+    position: relative;
+  }
+  // @keyframes moveUpandDown {
+  //   0%, 100%{
+  //     bottom:0;
+  //   }
+  //   50%{
+  //     bottom:30px;
+  //   }
+  // }
+
+}
 }
 //
