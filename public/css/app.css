@@ -405,11 +405,6 @@ h2 {
   margin-bottom: 2rem;
 }
 
-#about-page .content-box {
-  background: white;
-  padding: 20px;
-}
-
 @media (min-width: 0px) and (max-width: 767px) {
   #about-page {
     padding: 20px;
@@ -418,6 +413,59 @@ h2 {
 
 @media (min-width: 768px) and (max-width: 991px) {
   #about-page {
+    padding: 20px;
+  }
+}
+
+#waitlist-page {
+  padding: 100px;
+}
+
+#waitlist-page h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 2.5rem;
+}
+
+#waitlist-page p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+#waitlist-page form .form-group label {
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: black;
+}
+
+#waitlist-page form .form-group .form-control {
+  padding: 10px !important;
+  border: 2px solid #9c1b24;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+  height: auto;
+}
+
+#waitlist-page form .form-group button[type=submit] {
+  background: #9c1b24;
+  border: none;
+  padding: 20px 40px;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  #waitlist-page {
+    padding: 20px;
+  }
+
+  #waitlist-page h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #waitlist-page {
     padding: 20px;
   }
 }
@@ -625,6 +673,11 @@ body {
   #food-preview .food-slider .slide {
     width: 100%;
   }
+}
+
+.content-box {
+  background: white;
+  padding: 20px;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {

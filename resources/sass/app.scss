@@ -2,6 +2,7 @@
 @import "reset";
 @import "home";
 @import "pages/about";
+@import "pages/waitlist";
 @import "bootstrap.min.css";
 
 
@@ -195,7 +196,11 @@ body {
       }
     }
   }
-  
+}
+
+.content-box{
+  background: white;
+  padding: 20px;
 }
 
 // Medium devices (tablets, 768px and up)
