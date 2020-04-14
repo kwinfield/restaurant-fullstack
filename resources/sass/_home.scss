@@ -1,4 +1,41 @@
-
+.welcome-jumbo{
+  max-width: calc(100vw - 300px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #ed4852; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #ed4852 0%, #9c1b24 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #ed4852 0%,#9c1b24 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #ed4852 0%,#9c1b24 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  overflow: hidden;
+  padding: 100px;
+  transform: translate3d(300px, 0, 0);
+}
+.status{
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: .8rem;
+  font-weight: 700;
+  color: white;
+  background: black;
+  border-radius: 5px;
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+h1{
+  font-size: 4rem;
+  font-weight: 900;
+  align-self: flex-start;
+  color: white;
+  margin-bottom: 100px;
+}
+.burger-fries{
+  width: 100%;
+  // max-width: 1000px;
+  // animation: moveUpandDown 1s linear infinite;
+  position: relative;
+}
 #information{
   display: grid;
   grid-template-columns: 50% 50%;
@@ -185,3 +222,4 @@ h2{
   font-weight: 700;
   margin-bottom: 3rem;
 }
+
