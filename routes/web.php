@@ -21,6 +21,23 @@ Route::get('/app', function () {
     return view('test');
 });
 
+Route::get('/admin', function () {
+    return view('admin/dashboard');
+});
+
+Route::get('/register', function () {
+    return view('admin/register');
+});
+
+Route::get('/login', function () {
+    return view('admin/login');
+});
+
+Route::get('/admin/food-catagories', function () {
+    return view('admin/food-catagories/all');
+});
+
+
 Route::get('/menu', function () {
     return view('menu/index');
 });
