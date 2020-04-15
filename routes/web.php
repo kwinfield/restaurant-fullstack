@@ -37,6 +37,13 @@ Route::get('/admin/food-catagories', function () {
     return view('admin/food-catagories/all');
 });
 
+Route::get('/admin/food-catagories/create', function () {
+    return view('admin/food-catagories/create');
+});
+
+Route::get('/admin/food-catagories/{id}/edit', function () {
+    return view('admin/food-catagories/edit');
+});
 
 Route::get('/menu', function () {
     return view('menu/index');
