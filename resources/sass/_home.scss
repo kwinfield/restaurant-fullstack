@@ -23,13 +23,7 @@
   align-self: flex-start;
   margin-bottom: 20px;
 }
-h1{
-  font-size: 4rem;
-  font-weight: 900;
-  align-self: flex-start;
-  color: white;
-  margin-bottom: 100px;
-}
+
 .burger-fries{
   width: 100%;
   // max-width: 1000px;
@@ -164,7 +158,7 @@ h1{
       // border-right: 1px solid #e9f0f4;
       &:hover{
         .background{
-          background: rgb(245, 156, 46);
+          background: black;
           transform: translate3d(0, -200px, 0);
         }
         .content{
@@ -216,10 +210,5 @@ h1{
       }
     }
   }
-}
-h2{
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 3rem;
 }
 

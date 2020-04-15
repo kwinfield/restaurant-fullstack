@@ -3,6 +3,8 @@
 @import "home";
 @import "pages/about";
 @import "pages/waitlist";
+@import "pages/offers";
+@import "menu/index.scss";
 @import "bootstrap.min.css";
 
 
@@ -37,6 +39,26 @@ table {
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+h1{
+  font-size: 4rem;
+  font-weight: 900;
+  align-self: flex-start;
+  color: white;
+  margin-bottom: 100px;
+}
+
+h2{
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.content-box{
+  background: white;
+  padding: 20px;
+}
+
 
 #app-layout{
   display: grid;
@@ -196,11 +218,6 @@ body {
       }
     }
   }
-}
-
-.content-box{
-  background: white;
-  padding: 20px;
 }
 
 // Medium devices (tablets, 768px and up)
