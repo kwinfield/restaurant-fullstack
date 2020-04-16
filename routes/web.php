@@ -12,19 +12,30 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Static Pages
+Route::get('/', 'StaticPagesController@home');
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/menu', 'StaticPagesController@menu');
 
+Route::get('/menu/{slug}', 'StaticPagesController@singleMenu');
+
+Route::get('/about', 'StaticPagesController@about');
+
+Route::get('/waitlist', 'StaticPagesController@waitlist');
+
+Route::get('/contact', 'StaticPagesController@contact');
+
+Route::get('/offers', 'StaticPagesController@offers');
+
+// Admin Dashboard
 Route::get('/app', function () {
     return view('test');
 });
 
-Route::get('/admin', function () {
-    return view('admin/dashboard');
-});
+// Admin Food Catagories
+Route::get('/admin', 'admin\AdminController@dashboard');
 
+// Admin Authentication
 Route::get('/register', function () {
     return view('admin/register');
 });
@@ -33,38 +44,19 @@ Route::get('/login', function () {
     return view('admin/login');
 });
 
-Route::get('/admin/food-catagories', function () {
-    return view('admin/food-catagories/all');
-});
+// Admin Food Catagories
+Route::get('/admin', 'admin\AdminController@dashboard');
 
-Route::get('/admin/food-catagories/create', function () {
-    return view('admin/food-catagories/create');
-});
+Route::get('/admin/food-catagories', 'admin\FoodCatagoriesController@index');
 
-Route::get('/admin/food-catagories/{id}/edit', function () {
-    return view('admin/food-catagories/edit');
-});
+Route::get('/admin/food-catagories/create', 'admin\FoodCatagoriesController@create');
 
-Route::get('/menu', function () {
-    return view('menu/index');
-});
+Route::get('/admin/food-catagories/{id}/edit', 'admin\FoodCatagoriesController@edit');
 
-Route::get('/menu/{slug}', function () {
-    return view('menu/single-menu');
-});
+Route::get('/admin/food-items', 'admin\FoodItemsController@index');
 
-Route::get('/about', function () {
-    return view('pages/about');
-});
+Route::get('/admin/food-items/create', 'admin\FoodItemsController@create');
 
-Route::get('/waitlist', function () {
-    return view('pages/waitlist');
-});
+Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit');
 
-Route::get('/contact', function () {
-    return view('pages/contact');
-});
 
-Route::get('/offers', function () {
-    return view('pages/offers');
-});
