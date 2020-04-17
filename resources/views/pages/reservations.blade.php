@@ -9,6 +9,14 @@
                     <h1>Get On The List</h1>
                     <form>
                         <div class="form-group">
+                            <label for="firstnameinput">First Name</label>
+                            <input type="fname" class="form-control" id="firstnameinput" placeholder="First Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastnameinput">Last Name</label>
+                            <input type="lname" class="form-control" id="lastnameinput" placeholder="Last Name">
+                        </div>
+                        <div class="form-group">
                             <label for="emailInput">Email Address</label>
                             <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
                         </div>
