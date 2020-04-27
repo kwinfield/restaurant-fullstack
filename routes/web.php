@@ -71,3 +71,6 @@ Route::get('/admin/users', 'admin\UsersController@index');
 Route::get('/admin/users/create', 'admin\UsersController@create');
 
 Route::get('/admin/users/{id}/edit', 'admin\UsersController@edit');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
