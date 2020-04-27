@@ -36,11 +36,11 @@ Route::get('/app', function () {
 Route::get('/admin', 'admin\AdminController@dashboard');
 
 // Admin Authentication
-Route::get('/register', function () {
-    return view('admin/register');
+Route::get('admin/register', function () {
+    return view('auth/register');
 });
 
-Route::get('/login', function () {
+Route::get('admin/login', function () {
     return view('admin/login');
 });
 
