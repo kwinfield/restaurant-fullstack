@@ -74,6 +74,9 @@ Route::post('/admin/users', 'admin\UsersController@store');
 
 
 Route::get('/admin/users/{id}/edit', 'admin\UsersController@edit');
+
+Route::put('/admin/users/{id}', 'admin\UsersController@update');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
