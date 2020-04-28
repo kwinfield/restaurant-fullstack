@@ -45,15 +45,18 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>John Doe</td>
-                                        <td>2/2/2020</td>
-                                        <td><a href="/admin/users/1/edit"><i class="fas fa-edit"></i></td></a>
-                                        <td><a href="/admin/users/1/delete" onclick="if (! confirm('Are you sure you want to delete catagory?')) {return false;}"><i class="fas fa-trash-alt"></i></td></a>
-                                    </tr>
+                                    @foreach ($users as $user)
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>{{$user->fname}} {{$user->lname}}</td>
+                                            <td>{{date('m/d/y', strtotime($user->updated_at))}}</td>
+                                            <td><a href="/admin/users/{{$user->id}}/edit"><i class="fas fa-edit"></i></td></a>
+                                            <td><a href="/admin/users/{{$user->id}}/delete" onclick="if (! confirm('Are you sure you want to delete catagory?')) {return false;}"><i class="fas fa-trash-alt"></i></td></a>
+                                        </tr>  
+                                    @endforeach
                                 </tbody>
                             </table>
+                            {{ $users->links() }}
                         </div>
                     </div>
             </div>

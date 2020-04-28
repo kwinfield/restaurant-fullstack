@@ -31,7 +31,7 @@
                                 <div class="card">
                                         <h5 class="card-header">Create a New Users</h5>
                                         <div class="card-body">
-                                        <form method="POST" action="/admin/users">
+                                        <form class="splash-container" method="POST" action="/admin/users">
                                                 @csrf
                                                 <div class="form-group">
                                                     <label for="inputfirstItem">First Name</label>
@@ -85,7 +85,7 @@
                                                         @if ($role->title == 'Admin')
                                                             selected
                                                         @endif
-                                                        selected>{{$role->title}}</option>
+                                                        >{{$role->title}}</option>
                                                          
                                                         
                                                     @endforeach
