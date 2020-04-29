@@ -26,7 +26,7 @@ class FoodCategoriesController extends Controller
         request()->validate([
             'title' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
-            'image_url' => ['required', 'string',]
+            'image_url' => ['string',]
         ]);
         $category = new FoodCategory();
         $category->title = request('title');
@@ -48,7 +48,7 @@ class FoodCategoriesController extends Controller
         request()->validate([
             'title' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
-            'image_url' => ['required', 'string'],
+            'image_url' => ['string'],
         ]);
 
         $category = FoodCategory::find($id);

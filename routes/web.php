@@ -68,6 +68,12 @@ Route::get('/admin/food-items/create', 'admin\FoodItemsController@create');
 
 Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit');
 
+Route::post('/admin/food-items', 'admin\FoodItemsController@store');
+
+Route::put('/admin/food-items/{id}', 'admin\FoodItemsController@update');
+
+Route::get('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete');
+
 
 // Admin Customers
 Route::get('/admin/customers/offers-members', 'admin\CustomersController@allOffersMembers');
