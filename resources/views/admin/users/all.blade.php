@@ -51,7 +51,7 @@
                                             <td>{{$user->fname}} {{$user->lname}}</td>
                                             <td>{{date('m/d/y', strtotime($user->updated_at))}}</td>
                                             <td><a href="/admin/users/{{$user->id}}/edit"><i class="fas fa-edit"></i></td></a>
-                                            <td><a href="/admin/users/{{$user->id}}/delete" onclick="if (! confirm('Are you sure you want to delete catagory?')) {return false;}"><i class="fas fa-trash-alt"></i></td></a>
+                                            <td><a href="/admin/users/{{$user->id}}/delete" onclick="if (! confirm('Are you sure you want to delete category?')) {return false;}"><i class="fas fa-trash-alt"></i></td></a>
                                         </tr>  
                                     @endforeach
                                 </tbody>

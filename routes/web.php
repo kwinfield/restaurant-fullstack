@@ -32,7 +32,7 @@ Route::get('/app', function () {
     return view('test');
 });
 
-// Admin Food Catagories
+// Admin Food Categories
 Route::get('/admin', 'admin\AdminController@dashboard');
 
 // Admin Authentication
@@ -44,15 +44,24 @@ Route::get('admin/login', function () {
     return view('admin/login');
 });
 
-// Admin Food Catagories
+// Admin Dashboard
 Route::get('/admin', 'admin\AdminController@dashboard');
 
-Route::get('/admin/food-catagories', 'admin\FoodCatagoriesController@index');
+// Admin Food Categories
+Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index');
 
-Route::get('/admin/food-catagories/create', 'admin\FoodCatagoriesController@create');
+Route::get('/admin/food-categories/create', 'admin\FoodCategoriesController@create');
 
-Route::get('/admin/food-catagories/{id}/edit', 'admin\FoodCatagoriesController@edit');
+Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@edit');
 
+Route::post('/admin/food-categories', 'admin\FoodCategoriesController@store');
+
+Route::put('/admin/food-categories/{id}', 'admin\FoodCategoriesController@update');
+
+Route::get('/admin/food-categories/{id}/delete', 'admin\FoodCategoriesController@delete');
+
+
+// Admin Food Items
 Route::get('/admin/food-items', 'admin\FoodItemsController@index');
 
 Route::get('/admin/food-items/create', 'admin\FoodItemsController@create');

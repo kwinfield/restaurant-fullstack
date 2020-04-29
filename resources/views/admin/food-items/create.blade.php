@@ -16,7 +16,7 @@
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="/admin" class="breadcrumb-link">Dashboard</a></li>
-                                        <li class="breadcrumb-item"><a href="/admin/food-catagories" class="breadcrumb-link">All Food Item</a></li>
+                                        <li class="breadcrumb-item"><a href="/admin/food-categories" class="breadcrumb-link">All Food Item</a></li>
                                         <li class="breadcrumb-item active" aria-current="page">New Food Item</li>
                                     </ol>
                                 </nav>

@@ -24,14 +24,14 @@
                                 <div id="submenu-2" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">Food Catagories</a>
+                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">Food Categories</a>
                                             <div id="submenu-1-1" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="/admin/food-catagories">All Food Catagories<span class="badge badge-secondary">New</span></a>
+                                                        <a class="nav-link" href="/admin/food-categories">All Food Categories<span class="badge badge-secondary">New</span></a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="/admin/food-catagories/create">New Food Catagories<span class="badge badge-secondary">New</span></a>
+                                                        <a class="nav-link" href="/admin/food-categories/create">New Food Categories<span class="badge badge-secondary">New</span></a>
                                                     </li>
                                                 </ul>
                                             </div>
