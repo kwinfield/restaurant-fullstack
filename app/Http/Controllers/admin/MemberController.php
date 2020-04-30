@@ -14,54 +14,58 @@ class MemberController extends Controller
     }
     public function index(){
         $members = Member::paginate(10);
-        return view('admin/members/all-members', [
-            'categories' => $members
+        return view('admin/members/all', [
+            'members' => $members
         ]);
     }
     public function create(){
-        return view('admin/food-categories/create');
+        return view('members/create');
     }
     public function store(){
         request()->validate([
-            'title' => ['required', 'string', 'max:255'],
-            'description' => ['required', 'string'],
-            'image_url' => ['string',]
+            'fname' => ['required', 'string', 'max:255'],
+            'lname' => ['required', 'string'],
+            'email' => ['string'],
+            'phone_number' => ['string']
         ]);
         $member = new Member();
-        $member->title = request('title');
-        $member->description = request('description');
-        $member->image_url = request('image_url');
+        $member->fname = request('fname');
+        $member->lname = request('lname');
+        $member->email = request('email');
+        $member->phone_number = request('phone_number');
         $member->save();
 
 
-        return redirect('/admin/food-categories');
+        return redirect('/offers');
     }
     public function edit($id){
         $member = Member::find($id);
-        return view('admin/food-categories/edit', [
+        return view('admin/members/edit', [
             'member' => $member,
         ]);
     }
 
     public function update($id){
         request()->validate([
-            'title' => ['required', 'string', 'max:255'],
-            'description' => ['required', 'string'],
-            'image_url' => ['string'],
+            'fname' => ['required', 'string', 'max:255'],
+            'lname' => ['required', 'string'],
+            'email' => ['string'],
+            'phone_number' => ['string']
         ]);
 
         $member = Member::find($id);
-        $member->title = request('title');
-        $member->description = request('description');
-        $member->image_url = request('image_url');
+        $member->fname = request('fname');
+        $member->lname = request('lname');
+        $member->email = request('email');
+        $member->phone_number = request('phone_number');
         $member->save();
 
-        return redirect('/admin/food-categories');
+        return redirect('/admin/members');
         
     }
     public function delete($id){
         $member = Member::find($id);
         $member->delete();
-        return redirect('/admin/food-categories');
+        return redirect('/admin/members');
     }
 }

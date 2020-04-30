@@ -42,16 +42,22 @@
                                         <th scope="col">Email</th>
                                         <th scope="col">Phone Number</th>
                                         <th scope="col">Date Created</th>
+                                        <th scope="col">Edit</th>
+                                        <th scope="col">Delete</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Billy Rodriguez</td>
-                                        <td>billy@gmail.com</td>
-                                        <td>317-249-3687</td>
-                                        <td>2/2/2020</td>
-                                    </tr>
+                                    @foreach ($members as $member)
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>{{$member->fname}} {{$member->lname}}</td>
+                                            <td>{{$member->email}}</td>
+                                            <td>{{$member->phone_number}}</td>
+                                            <td>{{date('m/d/y', strtotime($member->updated_at))}}</td>
+                                            <td><a href="/admin/members/{{$member->id}}/edit"><i class="fas fa-edit"></i></td></a>
+                                            <td><a href="/admin/members/{{$member->id}}/delete" onclick="if (! confirm('Are you sure you want to delete member?')) {return false;}"><i class="fas fa-trash-alt"></i></td></a>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

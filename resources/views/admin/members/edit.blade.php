@@ -10,14 +10,14 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">Edit User</h2>
+                            <h2 class="pageheader-title">Edit Member</h2>
                             <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="/admin" class="breadcrumb-link">Dashboard</a></li>
-                                        <li class="breadcrumb-item"><a href="/admin/users" class="breadcrumb-link">All Users</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Edit User</li>
+                                        <li class="breadcrumb-item"><a href="/admin/users" class="breadcrumb-link">All Members</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Edit Member</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -29,14 +29,14 @@
                 <!-- ============================================================== -->
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                 <div class="card">
-                                        <h5 class="card-header">Edit User</h5>
+                                        <h5 class="card-header">Edit Member</h5>
                                         <div class="card-body">
-                                        <form class="splash-container" method="POST" action="/admin/users/{{$user->id}}">
+                                        <form class="splash-container" method="POST" action="/admin/members/{{$member->id}}">
                                                 @csrf
                                                 @method('PUT')
                                                 <div class="form-group">
                                                     <label for="inputfirstItem">First Name</label>
-                                                    <input id="inputfirstItem" type="text" class="form-control form-control-lg @error('fname') is-invalid @enderror" name="fname" value="{{ old('fname', $user->fname) }}" required autocomplete="name" autofocus placeholder="First Name">
+                                                    <input id="inputfirstItem" type="text" class="form-control form-control-lg @error('fname') is-invalid @enderror" name="fname" value="{{ old('fname', $member->fname) }}" required autocomplete="name" autofocus placeholder="First Name">
                                                     @error('fname')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
@@ -45,7 +45,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="inputlastItem">Last Name</label>
-                                                    <input id="inputlastItem" type="text" class="form-control form-control-lg @error('lname') is-invalid @enderror" name="lname" value="{{ old('lname', $user->lname) }}" required autocomplete="name" autofocus placeholder="Last Name">
+                                                    <input id="inputlastItem" type="text" class="form-control form-control-lg @error('lname') is-invalid @enderror" name="lname" value="{{ old('lname', $member->lname) }}" required autocomplete="name" autofocus placeholder="Last Name">
 
                                                     @error('lname')
                                                         <span class="invalid-feedback" role="alert">
@@ -55,7 +55,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="inputemail">Email</label>
-                                                    <input id="inputemail" type="email" class="form-control form-control-lg @error('email') is-invalid @enderror" name="email" value="{{ old('email', $user->email) }}" required autocomplete="email" placeholder="E-mail">
+                                                    <input id="inputemail" type="email" class="form-control form-control-lg @error('email') is-invalid @enderror" name="email" value="{{ old('email', $member->email) }}" required autocomplete="email" placeholder="E-mail">
 
                                                     @error('email')
                                                         <span class="invalid-feedback" role="alert">
@@ -64,33 +64,14 @@
                                                     @enderror
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="inputpassword">Password</label>
-                                                    <input id="inputpassword" type="password" class="form-control form-control-lg @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Password">
+                                                    <label for="inputphonenumber">Phone Number</label>
+                                                    <input id="inputphonenumber" type="tel" class="form-control form-control-lg @error('phone_number') is-invalid @enderror" name="phone_number" value="{{ old('phone_number', $member->phone_number) }}" autocomplete="phone_number" placeholder="Phone Number">
 
                                                     @error('password')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
                                                         </span>
                                                     @enderror
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="inputpassword">Confirm Password</label>
-                                                    <input id="inputpassword" type="password" class="form-control form-control-lg" name="password_confirmation" required autocomplete="new-password" placeholder="Confirm">
-                                                </div>
-                                                <div class="form-group">
-                                                <label for="inputrole">Role</label>
-                                                <select name="role_id" class="form-control" id="inputrole">
-                                                
-                                                    @foreach ($roles as $role)
-                                                        <option value="{{$role->id}}" 
-                                                        @if ($role->title == 'Employee')
-                                                            selected
-                                                        @endif
-                                                        >{{$role->title}}</option>
-                                                         
-                                                        
-                                                    @endforeach
-                                                </select>
                                                 </div>
                                                 <div class="row">
                                                 <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
@@ -102,7 +83,7 @@
                                                         </p>
                                                 </div>
                                                 </div>
-                                        </form>
+                                            </form>
                                         </div>
                                 </div>
                                 </div>
