@@ -76,9 +76,11 @@ Route::get('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete');
 
 
 // Admin Customers
-Route::get('/admin/customers/offers-members', 'admin\CustomersController@allOffersMembers');
+// Admin Members
+Route::get('/admin/members', 'admin\MemberController@index');
 
-Route::get('/admin/customers/reservations', 'admin\CustomersController@allReservations');
+// Admin Reservations
+Route::get('/admin/members/reservations', 'admin\MemberController@allReservations');
 
 // Admin Users
 Route::get('/admin/users', 'admin\UsersController@index');

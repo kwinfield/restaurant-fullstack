@@ -69,6 +69,9 @@
                                                 
                                                     @foreach ($categories as $category)
                                                         <option value="{{$category->id}}"
+                                                        @if ($category->id == $item->category_id)
+                                                            selected
+                                                        @endif
                                                         >{{$category->title}}</option>
                                                     @endforeach
                                                 </select>

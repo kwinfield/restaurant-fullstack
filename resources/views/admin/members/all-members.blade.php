@@ -40,6 +40,7 @@
                                         <th scope="col">id</th>
                                         <th scope="col">Full Name</th>
                                         <th scope="col">Email</th>
+                                        <th scope="col">Phone Number</th>
                                         <th scope="col">Date Created</th>
                                     </tr>
                                 </thead>
