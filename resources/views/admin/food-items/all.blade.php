@@ -57,6 +57,7 @@
                                     </tbody>
                                 </table>
                             <tbody>
+                            {{ $items->links() }}
                         </div>
                     </div>
             </div>
