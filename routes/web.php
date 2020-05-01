@@ -27,6 +27,8 @@ Route::get('/contact', 'StaticPagesController@contact');
 
 Route::get('/offers', 'StaticPagesController@offers');
 
+Route::get('/offers/thank-you', 'StaticPagesController@OffersThankYou');
+
 
 
 // Admin Dashboard

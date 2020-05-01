@@ -27,5 +27,8 @@ class StaticPagesController extends Controller
     public function offers(){
         return view('pages/offers');
     }
+    public function OffersThankYou(){
+        return view('pages/thank-you');
+    }
 }
 

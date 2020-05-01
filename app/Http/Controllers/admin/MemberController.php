@@ -36,7 +36,7 @@ class MemberController extends Controller
         $member->save();
 
 
-        return redirect('/offers');
+        return redirect('/offers/thank-you');
     }
     public function edit($id){
         $member = Member::find($id);
