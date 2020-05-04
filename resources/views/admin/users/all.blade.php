@@ -37,7 +37,6 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">id</th>
                                         <th scope="col">Email</th>
                                         <th scope="col">Date Created</th>
                                         <th scope="col">Edit</th>
@@ -47,7 +46,6 @@
                                 <tbody>
                                     @foreach ($users as $user)
                                         <tr>
-                                            <th scope="row">1</th>
                                             <td>{{$user->fname}} {{$user->lname}}</td>
                                             <td>{{date('m/d/y', strtotime($user->updated_at))}}</td>
                                             <td><a href="/admin/users/{{$user->id}}/edit"><i class="fas fa-edit"></i></td></a>

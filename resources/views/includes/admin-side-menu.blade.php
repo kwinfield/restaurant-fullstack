@@ -68,14 +68,11 @@
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3-2" aria-controls="submenu-3-2">New Reservation</a>
+                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3-2" aria-controls="submenu-3-2">Reservation</a>
                                             <div id="submenu-3-2" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="/admin/members/reservations">All Members<span class="badge badge-secondary">New</span></a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" href="/admin/members/reservations/create">Create New Member<span class="badge badge-secondary">New</span></a>
+                                                        <a class="nav-link" href="/admin/reservations">All Reservation<span class="badge badge-secondary">New</span></a>
                                                     </li>
                                                 </ul>
                                             </div>
