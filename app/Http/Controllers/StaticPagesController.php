@@ -52,7 +52,7 @@ class StaticPagesController extends Controller
     public function offers(){
         return view('pages/offers');
     }
-    public function OffersThankYou(){
+    public function offersThankYou(){
         return view('pages/thank-you');
     }
 }

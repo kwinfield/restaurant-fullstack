@@ -19,30 +19,30 @@ class ReservationController extends Controller
             'reservations' => $reservations
         ]);
     }
-    public function create(){
-        return view('admin/reservations/create');
-    }
-    public function store(){
-        request()->validate([
-            'fname' => ['required', 'string', 'max:255'],
-            'lname' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255'],
-            'phone_number' => ['required', 'string'],
-            'guest_total' => ['required', 'string'],
-            'time' => ['required', 'string'],
-        ]);
-        $reservation = new Reservation();
-        $reservation->fname = request('fname');
-        $reservation->lname = request('lname');
-        $reservation->email = request('email');
-        $reservation->phone_number = request('phone_number');
-        $reservation->guest_total = request('guest_total');
-        $reservation->time = request('time');
-        $reservation->save();
+    // public function create(){
+    //     return view('admin/reservations/create');
+    // }
+    // public function store(){
+    //     request()->validate([
+    //         'fname' => ['required', 'string', 'max:255'],
+    //         'lname' => ['required', 'string', 'max:255'],
+    //         'email' => ['required', 'string', 'email', 'max:255'],
+    //         'phone_number' => ['required', 'string'],
+    //         'guest_total' => ['required', 'string'],
+    //         'time' => ['required', 'string'],
+    //     ]);
+    //     $reservation = new Reservation();
+    //     $reservation->fname = request('fname');
+    //     $reservation->lname = request('lname');
+    //     $reservation->email = request('email');
+    //     $reservation->phone_number = request('phone_number');
+    //     $reservation->guest_total = request('guest_total');
+    //     $reservation->time = request('time');
+    //     $reservation->save();
 
 
-        return redirect('/reservations');
-    }
+    //     return redirect('/reservations');
+    // }
     public function edit($id){
         $reservation = Reservation::find($id);
         return view('admin/reservations/edit', [
@@ -59,7 +59,7 @@ class ReservationController extends Controller
             'guest_total' => ['required', 'string'],
             'time' => ['required', 'string'],
         ]);
-        $category = FoodCategory::find($id);
+        $reservation = Reservation::find($id);
         $reservation->fname = request('fname');
         $reservation->lname = request('lname');
         $reservation->email = request('email');
@@ -68,12 +68,12 @@ class ReservationController extends Controller
         $reservation->time = request('time');
         $reservation->save();
 
-        return redirect('/confirmed');
+        return redirect('admin/reservations');
         
     }
     public function delete($id){
         $reservation = Reservation::find($id);
         $reservation->delete();
-        return redirect('/reservations');
+        return redirect('admin/reservations');
     }
 }

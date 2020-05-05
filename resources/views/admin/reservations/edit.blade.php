@@ -73,6 +73,36 @@
                                                         </span>
                                                     @enderror
                                                 </div>
+                                                <div class="form-group">
+                                                    <label for="guestInput">How Many Guest?</label>
+                                                    <select name="guest_total" class="form-control @error('guest_total') is-invalid @enderror" id="guestInput" value="{{ old('guest_total', $reservation->guest_total) }}">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    </select>
+                                                    @error('guest_total')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="timeInput">What time?</label>
+                                                    <select name="time" class="form-control @error('time') is-invalid @enderror" id="timeInput" value="{{ old('time', $reservation->time) }}">
+                                                    <option value="6">6:00</option>
+                                                    <option value="7">7:00</option>
+                                                    <option value="8">8:00</option>
+                                                    <option value="9">9:00</option>
+                                                    <option value="10">10:00</option>
+                                                    </select>
+                                                    @error('password')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
+                                                </div>
                                                 <div class="row">
                                                 <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
                                                         

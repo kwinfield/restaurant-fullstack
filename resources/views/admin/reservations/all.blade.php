@@ -51,7 +51,7 @@
                                     <tbody>
                                         @foreach ($reservations as $reservation)
                                             <tr>
-                                                <th scope="row">1</th>
+                                                <th scope="row">{{$reservation->id}}</th>
                                                 <td>{{$reservation->fname}} {{$reservation->lname}}</td>
                                                 <td>{{$reservation->email}}</td>
                                                 <td>{{$reservation->phone_number}}</td>
@@ -59,7 +59,7 @@
                                                 <td>{{$reservation->time}}</td>
                                                 <td>{{date('m/d/yy', strtotime($reservation->updated_at))}}</td>
                                                 <td><a href="/admin/reservations/{{$reservation->id}}/edit"><i class="fas fa-edit"></i></td></a>
-                                                <td><a href="/admin/reservations/{{$reservation->id}}/delete" onclick="if (! confirm('Are you sure you want to delete reservation?')) {return false;}"><i class="fas fa-trash-alt"></i></td></a>
+                                                <td><a href="/admin/reservations/{{$reservation->id}}/delete" onclick="if (! confirm('Are you sure you want to delete this reservation?')) {return false;}"><i class="fas fa-trash-alt"></i></td></a>
                                             </tr>  
                                         @endforeach
                                     </tbody>

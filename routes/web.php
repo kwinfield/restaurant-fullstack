@@ -31,7 +31,7 @@ Route::get('/contact', 'StaticPagesController@contact');
 
 Route::get('/offers', 'StaticPagesController@offers');
 
-Route::get('/offers/thank-you', 'StaticPagesController@OffersThankYou');
+Route::get('/offers/thank-you', 'StaticPagesController@offersThankYou');
 
 
 
@@ -98,11 +98,25 @@ Route::get('/admin/members/{id}/delete', 'admin\MemberController@delete');
 // Admin Reservations
 Route::get('/admin/reservations', 'admin\ReservationController@index');
 
-Route::get('/admin/reservations/{id}/edit', 'admin\UsersController@edit');
+Route::get('/admin/reservations/{id}/edit', 'admin\ReservationController@edit');
 
-Route::put('/admin/reservations/{id}', 'admin\UsersController@update');
+Route::put('/admin/reservations/{id}', 'admin\ReservationController@update');
 
-Route::get('/admin/reservations/{id}/delete', 'admin\UsersController@delete');
+Route::get('/admin/reservations/{id}/delete', 'admin\ReservationController@delete');
+
+// Admin Settings
+
+Route::get('/admin/settings/general', 'admin\SettingsController@general');
+
+Route::post('/admin/settings/general', 'admin\SettingsController@saveGeneral');
+
+Route::get('/admin/settings/seo', 'admin\SettingsController@seo');
+
+Route::post('/admin/settings/seo', 'admin\SettingsController@saveSeo');
+
+Route::get('/admin/settings/social', 'admin\SettingsController@social');
+
+Route::post('/admin/settings/social', 'admin\SettingsController@saveSocial');
 
 // Admin Users
 Route::get('/admin/users', 'admin\UsersController@index');
