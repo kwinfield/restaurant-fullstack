@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\GeneralSetting;
+use App\SeoSetting;
 
 class SettingController extends Controller
 {
@@ -45,6 +46,30 @@ class SettingController extends Controller
         $general_setting->save();
 
         return redirect('/admin/settings/general');
+        
+    }
+
+    public function seo(){
+        $id = 1;
+        $seo_setting = SeoSetting::find($id);
+        return view('admin/settings/seo', [
+            'category' => $seo_setting,
+        ]);
+    }
+
+    public function saveSeo(){
+        $id = 1;
+        request()->validate([
+            'description' => ['required', 'string'],
+            'keywords' => ['required', 'string'],
+        ]);
+
+        $seo_setting = SeoSetting::find($id);
+        $seo_setting->description = request('description');
+        $seo_setting->keywords = request('keywords');
+        $seo_setting->save();
+
+        return redirect('/admin/settings/seo');
         
     }
     
