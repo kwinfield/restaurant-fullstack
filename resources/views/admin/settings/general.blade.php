@@ -16,7 +16,6 @@
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="/admin" class="breadcrumb-link">Dashboard</a></li>
-                                        <li class="breadcrumb-item"><a href="/admin/food-categories" class="breadcrumb-link">All General Settings</a></li>
                                         <li class="breadcrumb-item active" aria-current="page">Edit General Settings</li>
                                     </ol>
                                 </nav>
@@ -103,7 +102,7 @@
                                                 </div>
                                                 <div class="col-sm-6 pl-0">
                                                         <p class="text-right">
-                                                        <button type="submit" class="btn btn-space btn-primary">Submit</button>
+                                                        <button type="submit" class="btn btn-space btn-primary" onclick="if (! confirm('Your General Settings have been updated!')) {return false;}">Submit</button>
                                                         </p>
                                                 </div>
                                                 </div>

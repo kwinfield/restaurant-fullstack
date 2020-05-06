@@ -16,7 +16,6 @@
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="/admin" class="breadcrumb-link">Dashboard</a></li>
-                                        <li class="breadcrumb-item"><a href="/admin/food-categories" class="breadcrumb-link">All Seo Settings</a></li>
                                         <li class="breadcrumb-item active" aria-current="page">Edit Seo Settings</li>
                                     </ol>
                                 </nav>
@@ -31,7 +30,7 @@
                                 <div class="card">
                                         <h5 class="card-header">Edit Seo Settings</h5>
                                         <div class="card-body">
-                                        <form class="splash-container" method="POST" action="/admin/settings/Seo">
+                                        <form class="splash-container" method="POST" action="/admin/settings/seo">
                                                 @csrf
                                                 @method('PUT')
                                                 <div class="form-group">
@@ -58,7 +57,7 @@
                                                 </div>
                                                 <div class="col-sm-6 pl-0">
                                                         <p class="text-right">
-                                                        <button type="submit" class="btn btn-space btn-primary">Submit</button>
+                                                        <button type="submit" class="btn btn-space btn-primary" onclick="if (! confirm('Your SEO Settings have been updated!')) {return false;}">Submit</button>
                                                         </p>
                                                 </div>
                                                 </div>
