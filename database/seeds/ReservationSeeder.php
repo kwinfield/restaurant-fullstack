@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Faker\Factory as Faker;
 
 class ReservationSeeder extends Seeder
 {
@@ -11,13 +12,18 @@ class ReservationSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            'fname' => 'Billy',
-            'lname' => 'Smith',
-            'email' => 'billy@gmail.com',
-            'phone_number' => Hash::make('highlife'),
-            'guest_total' => 4,
-            'time' => 6,
-        ]);
+        $faker = Faker::create();
+        foreach(range(1,100) as $index){
+            DB::table('reservations')->insert([
+                'fname' => $faker->firstName,
+                'lname' => $faker->lastName,
+                'email' => $faker->email,
+                'phone_number' => $faker->phoneNumber,
+                'guest_total' => rand(1,5),
+                'time' => rand(6,10),
+                'updated_at' => $faker->dateTimeThisMonth,
+                'created_at' => $faker->dateTimeThisMonth,
+            ]);
+        } 
     }
 }

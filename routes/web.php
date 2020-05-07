@@ -100,20 +100,15 @@ Route::get('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete')
 
 // Admin Customers
 // Admin Members
-Route::get('/admin/members', 'admin\MemberController@index')
-->middleware('role:Admin');
+Route::get('/admin/members', 'admin\MemberController@index');
 
-Route::post('/admin/members', 'admin\MemberController@store')
-->middleware('role:Admin');
+Route::post('/admin/members', 'admin\MemberController@store');
 
-Route::get('/admin/members/{id}/edit', 'admin\MemberController@edit')
-->middleware('role:Admin');
+Route::get('/admin/members/{id}/edit', 'admin\MemberController@edit');
 
-Route::put('/admin/members/{id}', 'admin\MemberController@update')
-->middleware('role:Admin');
+Route::put('/admin/members/{id}', 'admin\MemberController@update');
 
-Route::get('/admin/members/{id}/delete', 'admin\MemberController@delete')
-->middleware('role:Admin');
+Route::get('/admin/members/{id}/delete', 'admin\MemberController@delete');
 
 // Admin Reservations
 Route::get('/admin/reservations', 'admin\ReservationController@index');
