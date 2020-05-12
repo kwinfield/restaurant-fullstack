@@ -166,7 +166,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-View::composer(['home', 'pages/about', 'pages/contact', 'pages/offers', 'pages/reservations', 'thank-you', 'confirmed', 'menu/index', 'menu/single-menu'], function ($view) {
+View::composer(['home', 'pages/about', 'pages/contact', 'pages/offers', 'pages/reservations', 'thank-you', 'confirmed', 'menu.all-categories', 'menu.single-menu'], function ($view) {
     $generalSettings = GeneralSetting::find(1);
     $socialSettings = SocialSetting::find(1);
     $seoSettings = SeoSetting::find(1);
