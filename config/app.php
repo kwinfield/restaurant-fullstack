@@ -161,7 +161,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Fruitcake\Cors\CorsServiceProvider::class,
+        Fruitcake\Cors\ServiceProvider::class,
 
         /*
          * Package Service Providers...
