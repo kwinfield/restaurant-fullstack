@@ -14,7 +14,7 @@ class CreateSocialSettingsTable extends Migration
     public function up()
     {
         Schema::create('social_settings', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->text('facebook_url')->nullable();
             $table->text('twitter_url')->nullable();
             $table->text('instagram_url')->nullable();

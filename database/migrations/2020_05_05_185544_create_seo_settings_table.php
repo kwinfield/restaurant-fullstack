@@ -14,7 +14,7 @@ class CreateSeoSettingsTable extends Migration
     public function up()
     {
         Schema::create('seo_settings', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->text('description');
             $table->text('keywords');
             $table->timestamps();
