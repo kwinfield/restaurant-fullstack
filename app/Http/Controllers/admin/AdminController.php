@@ -20,13 +20,13 @@ class AdminController extends Controller
 
         $estimated_income_last_30 = DB::select(DB::raw('
             SELECT 
-                (sum(guests_total) * 27 ) as total
+                (sum(guest_total) * 27 ) as total
             FROM reservations
             WHERE created_at BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE()
         '));
         $total_customers_last_30 = DB::select(DB::raw('
             SELECT 
-                sum(guests_total) as total
+                sum(guest_total) as total
             FROM reservations
             WHERE created_at BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE()
         '));
