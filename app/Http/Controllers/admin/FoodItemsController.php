@@ -14,7 +14,7 @@ class FoodItemsController extends Controller
         $this->middleware('auth');
     } 
     public function index(){
-        $items = FoodItem::paginate(1);
+        $items = FoodItem::paginate(10);
         return view('admin/food-items/all', [
             'items' => $items
         ]);
