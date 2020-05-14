@@ -14,12 +14,12 @@ class CreateReservationsTable extends Migration
     public function up()
     {
         Schema::create('reservations', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('fname');
             $table->string('lname');
             $table->string('email');
             $table->string('phone_number');
-            $table->integer('guest_total');
+            $table->integer('guests_total');
             $table->integer('time');
             $table->timestamps();
         });
