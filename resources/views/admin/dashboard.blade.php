@@ -88,7 +88,7 @@
                                             <div class="card-body">
                                                 <h5 class="text-muted">Total Employees</h5>
                                                 <div class="metric-value d-inline-block">
-                                                    <h1 class="mb-1">{{$total_employees_last_30}}</h1>
+                                                    <h1 class="mb-1">{{$total_employees}}</h1>
                                                 </div>
                                                 <div class="metric-label d-inline-block float-right text-secondary font-weight-bold">
                                                     <span>-2.00%</span>
