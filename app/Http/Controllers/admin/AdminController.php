@@ -45,7 +45,7 @@ class AdminController extends Controller
             where role_id = 2
         '));
 
-        $latestReservations = Reservation::where('guests_total', '>', 0)->limit(5)->orderBy('created_at', 'desc')->get();
+        $latestReservations = Reservation::where('guest_total', '>', 0)->limit(5)->orderBy('created_at', 'desc')->get();
 
 
 
@@ -63,9 +63,9 @@ class AdminController extends Controller
         // return $estimated_income_daily_data = DB::select(DB::raw('
         //     SELECT 
         //         DATE_FORMAT(created_at,"%Y-%m-%d") as reserved_day, 
-        //         (sum(guests_total) * 27 ) as estimated_earnings, 
+        //         (sum(guest_total) * 27 ) as estimated_earnings, 
         //         count(*) as total_reservations,
-        //         sum(guests_total)
+        //         sum(guest_total)
         //     FROM reservations
         //     group by reserved_day desc;
         // '));
@@ -73,7 +73,7 @@ class AdminController extends Controller
         return $estimated_income_daily_data = DB::select(DB::raw('
             SELECT 
                 DATE_FORMAT(created_at,"%Y-%m-%d") as x, 
-                (sum(guests_total) * 27 ) as y
+                (sum(guest_total) * 27 ) as y
             FROM reservations
             group by x desc;
         '));
