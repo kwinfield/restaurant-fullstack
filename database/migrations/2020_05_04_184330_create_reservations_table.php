@@ -19,7 +19,7 @@ class CreateReservationsTable extends Migration
             $table->string('lname');
             $table->string('email');
             $table->string('phone_number');
-            $table->integer('guest_total');
+            $table->integer('guests_total');
             $table->integer('time');
             $table->timestamps();
         });
