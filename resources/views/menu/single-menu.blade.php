@@ -17,7 +17,7 @@
                             <div class="col-md-6">
                                 <div class="item">
                                     <div class="title">
-                                        <img src="{{$item->image_url}}" class="img-fluid">
+                                        <img src="{{$item->image_url}}" class="img-fluid" style="max-height: 100px">>
                                         <h4>{{$item->title}}</h4>
                                         <span class="price">{{$item->price}}</span>
                                     </div>
